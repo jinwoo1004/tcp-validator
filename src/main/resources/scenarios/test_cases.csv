@@ -1,0 +1,2 @@
+﻿name,cmd,target,params,send
+gateway(cmd=10),10,gateway,$cmd=10;$target=gateway,<start=0061&0>$version=2.0$cmd=10$copy=50-2696$target=gateway
