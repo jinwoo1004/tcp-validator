@@ -59,7 +59,7 @@ public class TcpValidatorApp extends JFrame {
         loadScenarioButton.addActionListener(e -> loadScenarioFromFile());
         
         maskIpButton = new JButton("로그 IP 마스킹");
-        maskIpButton.addActionListener(e -> maskIpFromLogFile());
+        maskIpButton.addActionListener(e -> maskSensitiveInfo());
         
         resultFilter = new JComboBox<>(new String[]{"전체", "PASS", "FAIL", "ERROR"});
         resultFilter.addActionListener(e -> applyFilters());
