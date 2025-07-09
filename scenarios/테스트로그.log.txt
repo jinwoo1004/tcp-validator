@@ -1,0 +1,200 @@
+2025-07-09 08:00:00,011 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580040900906] Type : 50 , Client : [empty]:43402 , Message =  <start=0133&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=28#dev=2
+2025-07-09 08:00:00,011 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580040900906:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,011 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000450:0] <start=0133&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=28#dev=2
+2025-07-09 08:00:00,011 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580040900906:50] EXEC class net.ezville.ver.ez20.t_boiler
+2025-07-09 08:00:00,011 [net.ezville.ver.Exec.send_iot(621)] [SENDIOT:SEND] Message = <start=0133&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=28#dev=2
+2025-07-09 08:00:00,012 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-386, 현재 대기열 크기: 999
+2025-07-09 08:00:00,012 [net.ezville.ver.EZTransferSsl.onWriteAll(2512)] [SSL WriteAll:2100000000000035219] Client : [empty]:1980 , Msg = <start=0133&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=28#dev=2
+2025-07-09 08:00:00,012 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-386, 현재 대기열 크기: 999
+2025-07-09 08:00:00,016 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5300092580010000112] Type : 53 , Client : [empty]:54786 , Message =  <start=0207&0>$version=3.0$cmd=11$copy=[empty]$dongho=[empty]$target=locationinformation#dongho=[empty]#no=1#camera=#location=C_47#locationfloor=B1#locationcode=0026,0264#time=20250709080001#carno=[empty]
+2025-07-09 08:00:00,016 [net.ezville.EZWorkerManager.wakeup(139)] [W:5300092580010000112:53] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,016 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000388:0] <start=0207&0>$version=3.0$cmd=11$copy=[empty]$dongho=[empty]$target=locationinformation#dongho=[empty]#no=1#camera=#location=C_47#locationfloor=B1#locationcode=0026,0264#time=20250709080001#carno=[empty]
+2025-07-09 08:00:00,016 [net.ezville.ver.EZWorker.working(213)] [W-2:5300092580010000112:53] EXEC class net.ezville.ver.ez20.t_locationinformation
+2025-07-09 08:00:00,017 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-324, 현재 대기열 크기: 999
+2025-07-09 08:00:00,017 [net.ezville.ver.EZTransferSsl.onWrite(2578)] [S:5000092580041701604:50] Client : [empty]:49882 , <start=0211&0>$version=2.0$cmd=11$copy=[empty]$dongho=[empty]$target=locationinformation#source=0002#no=1#tagid=0#camera=#location=C_47#locationcode=0026,0264#locationfloor=B1#time=20250709080001#carno=[empty]
+2025-07-09 08:00:00,017 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-324, 현재 대기열 크기: 999
+2025-07-09 08:00:00,017 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:5000092580041701604:50]Client : [empty]:49882 , 데이터 보내기 완료
+2025-07-09 08:00:00,026 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580041001802] Type : 50 , Client : [empty]:41828 , Message =  <start=0317&0>$version=2.0$cmd=11$copy=[empty]$danji=[empty]$dongho=[empty]$target=gateway#dongho=[empty]#ip=[empty]#status=0#curtime=[empty]#hwversion=[empty]#swversion=[empty]&1.0.3&3.4.3&T#specversion=[empty]#spectype=[empty]#mode=1#mode_user=1#mode_method=11#alarm=0&20250709075956#rcare=off
+2025-07-09 08:00:00,026 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580041001802:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,026 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000550:0] <start=0317&0>$version=2.0$cmd=11$copy=[empty]$danji=[empty]$dongho=[empty]$target=gateway#dongho=[empty]#ip=[empty]#status=0#curtime=[empty]#hwversion=[empty]#swversion=[empty]&1.0.3&3.4.3&T#specversion=[empty]#spectype=[empty]#mode=1#mode_user=1#mode_method=11#alarm=0&20250709075956#rcare=off
+2025-07-09 08:00:00,026 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580041001802:50] EXEC class net.ezville.ver.ez20.t_gateway
+2025-07-09 08:00:00,027 [net.ezville.common.EZSession.checkGateway(639)] Send Gateway Check - IP : [empty] , ProgramType : 50
+2025-07-09 08:00:00,027 [net.ezville.ver.EZTransferSsl.onWrite(2578)] [S:5000092580041001801:50] Client : [empty]:50664 , <start=0061&0>$version=2.0$cmd=10$copy=[empty]$target=gateway
+2025-07-09 08:00:00,027 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:5000092580041001801:50]Client : [empty]:50664 , 데이터 보내기 완료
+2025-07-09 08:00:00,029 [net.ezville.comp.ex.e_gateway.recv_StatusResponse(375)] [GATEWAY COPY VALUE CHECK =>:50-1666][410&1802]
+2025-07-09 08:00:00,030 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-486, 현재 대기열 크기: 999
+2025-07-09 08:00:00,030 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-486, 현재 대기열 크기: 999
+2025-07-09 08:00:00,031 [net.ezville.ver.ez20.EZTransfer.onRead_default(860)] [Y:5500092580010000701:55] 아이템은 Q로 이동합니다.
+2025-07-09 08:00:00,041 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580042600203] Type : 50 , Client : [empty]:35168 , Message =  <start=0133&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=1#onoff=0#settemp=5#curtemp=26#dev=2
+2025-07-09 08:00:00,041 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580042600203:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,041 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000341:0] <start=0133&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=1#onoff=0#settemp=5#curtemp=26#dev=2
+2025-07-09 08:00:00,041 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580042600203:50] EXEC class net.ezville.ver.ez20.t_boiler
+2025-07-09 08:00:00,041 [net.ezville.ver.Exec.send_iot(621)] [SENDIOT:SEND] Message = <start=0133&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=1#onoff=0#settemp=5#curtemp=26#dev=2
+2025-07-09 08:00:00,042 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5500092580010000701] Type : 55 , Client : [empty]:49675 , Message =  <start=0133&0>$version=2.0$copy=[empty]$cmd=30$dongho=[empty]$target=elevator#mode=arrival#dongho=[empty]#no=1#direction=stop#flow=1
+2025-07-09 08:00:00,042 [net.ezville.ver.EZTransferSsl.onWriteAll(2512)] [SSL WriteAll:2100000000000035219] Client : [empty]:1980 , Msg = <start=0133&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=1#onoff=0#settemp=5#curtemp=26#dev=2
+2025-07-09 08:00:00,042 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-277, 현재 대기열 크기: 999
+2025-07-09 08:00:00,042 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000395:0] <start=0133&0>$version=2.0$copy=[empty]$cmd=30$dongho=[empty]$target=elevator#mode=arrival#dongho=[empty]#no=1#direction=stop#flow=1
+2025-07-09 08:00:00,042 [net.ezville.EZWorkerManager.wakeup(139)] [W:5500092580010000701:55] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,042 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-277, 현재 대기열 크기: 999
+2025-07-09 08:00:00,042 [net.ezville.ver.EZWorker.working(213)] [W-2:5500092580010000701:55] EXEC class net.ezville.ver.ez20.t_elevator
+2025-07-09 08:00:00,044 [net.ezville.ver.ez20.EZTransfer.onRead_default(860)] [Y:5500092580010000701:55] 아이템은 Q로 이동합니다.
+2025-07-09 08:00:00,055 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5500092580010000701] Type : 55 , Client : [empty]:49675 , Message =  <start=0131&0>$version=2.0$copy=[empty]$cmd=30$dongho=[empty]$target=elevator#mode=close#dongho=[empty]#no=1#direction=stop#flow=1
+2025-07-09 08:00:00,055 [net.ezville.EZWorkerManager.wakeup(139)] [W:5500092580010000701:55] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,055 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000452:0] <start=0131&0>$version=2.0$copy=[empty]$cmd=30$dongho=[empty]$target=elevator#mode=close#dongho=[empty]#no=1#direction=stop#flow=1
+2025-07-09 08:00:00,055 [net.ezville.ver.EZWorker.working(213)] [W-2:5500092580010000701:55] EXEC class net.ezville.ver.ez20.t_elevator
+2025-07-09 08:00:00,058 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-331, 현재 대기열 크기: 998
+2025-07-09 08:00:00,058 [net.ezville.ver.ez20.EZTransfer.onWrite(551)] [S:7100092580043509011:71] Client : [empty]:54459, Msg : <start=0230&1>$version=2.0$cmd=30$copy=[empty]$dongho=[empty]$target=elevator#mode=arrival#dongho=[empty]#direction=stop#riding_ev=1#no=1#direction=stop#flow=1
+2025-07-09 08:00:00,058 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-331, 현재 대기열 크기: 998
+2025-07-09 08:00:00,058 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:7100092580043509011:71]Client : [empty]:54459 , 데이터 보내기 완료
+2025-07-09 08:00:00,062 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580042001801] Type : 50 , Client : [empty]:34270 , Message =  <start=0135&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=1#onoff=1#settemp=20#curtemp=29#dev=2
+2025-07-09 08:00:00,062 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580042001801:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,062 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000386:0] <start=0135&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=1#onoff=1#settemp=20#curtemp=29#dev=2
+2025-07-09 08:00:00,062 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580042001801:50] EXEC class net.ezville.ver.ez20.t_boiler
+2025-07-09 08:00:00,062 [net.ezville.ver.Exec.send_iot(621)] [SENDIOT:SEND] Message = <start=0135&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=1#onoff=1#settemp=20#curtemp=29#dev=2
+2025-07-09 08:00:00,063 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-322, 현재 대기열 크기: 998
+2025-07-09 08:00:00,063 [net.ezville.ver.EZTransferSsl.onWriteAll(2512)] [SSL WriteAll:2100000000000035219] Client : [empty]:1980 , Msg = <start=0135&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=1#onoff=1#settemp=20#curtemp=29#dev=2
+2025-07-09 08:00:00,063 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-322, 현재 대기열 크기: 998
+2025-07-09 08:00:00,071 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-388, 현재 대기열 크기: 999
+2025-07-09 08:00:00,071 [net.ezville.ver.ez20.EZTransfer.onWrite(551)] [S:7100092580043509011:71] Client : [empty]:54459, Msg : <start=0206&1>$version=2.0$cmd=30$copy=[empty]$dongho=[empty]$target=elevator#mode=close#dongho=[empty]#riding_ev=1#no=1#direction=stop#flow=1
+2025-07-09 08:00:00,071 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-388, 현재 대기열 크기: 999
+2025-07-09 08:00:00,071 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:7100092580043509011:71]Client : [empty]:54459 , 데이터 보내기 완료
+2025-07-09 08:00:00,083 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580041702602] Type : 50 , Client : [empty]:58460 , Message =  <start=0141&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=secsensor#mode=1#no=2#onoff=1#alarm=0#zone=2#dongho=[empty]
+2025-07-09 08:00:00,083 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580041702602:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,083 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000376:0] <start=0141&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=secsensor#mode=1#no=2#onoff=1#alarm=0#zone=2#dongho=[empty]
+2025-07-09 08:00:00,083 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580041702602:50] EXEC class net.ezville.ver.ez20.t_secsensor
+2025-07-09 08:00:00,083 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-312, 현재 대기열 크기: 999
+2025-07-09 08:00:00,084 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-312, 현재 대기열 크기: 999
+2025-07-09 08:00:00,106 [net.ezville.ver.ez20.EZTransfer.onRead_default(860)] [Y:7100092580043509011:71] 아이템은 Q로 이동합니다.
+2025-07-09 08:00:00,109 [net.ezville.common.EZSession.checkGateway(639)] Send Gateway Check - IP : [empty] , ProgramType : 50
+2025-07-09 08:00:00,109 [net.ezville.ver.EZTransferSsl.onWrite(2578)] [S:5000092580040801405:50] Client : [empty]:48960 , <start=0061&0>$version=2.0$cmd=10$copy=[empty]$target=gateway
+2025-07-09 08:00:00,109 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:5000092580040801405:50]Client : [empty]:48960 , 데이터 보내기 완료
+2025-07-09 08:00:00,110 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580042501501] Type : 50 , Client : [empty]:50276 , Message =  <start=0156&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=light#mode=sub#no=2#device_no=1#onoff=1#type=2#type_mode=-1#dimming=4#dev=2
+2025-07-09 08:00:00,110 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580042501501:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,110 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000209:0] <start=0156&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=light#mode=sub#no=2#device_no=1#onoff=1#type=2#type_mode=-1#dimming=4#dev=2
+2025-07-09 08:00:00,110 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580042501501:50] EXEC class net.ezville.ver.ez20.t_light
+2025-07-09 08:00:00,111 [net.ezville.ver.Exec.send_iot(621)] [SENDIOT:SEND] Message = <start=0156&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=light#mode=sub#no=2#device_no=1#onoff=1#type=2#type_mode=-1#dimming=4#dev=2
+2025-07-09 08:00:00,111 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-145, 현재 대기열 크기: 999
+2025-07-09 08:00:00,111 [net.ezville.ver.EZTransferSsl.onWriteAll(2512)] [SSL WriteAll:2100000000000035219] Client : [empty]:1980 , Msg = <start=0156&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=light#mode=sub#no=2#device_no=1#onoff=1#type=2#type_mode=-1#dimming=4#dev=2
+2025-07-09 08:00:00,111 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-145, 현재 대기열 크기: 999
+2025-07-09 08:00:00,117 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:7100092580043509011] Type : 71 , Client : [empty]:54459 , Message =  <start=0168&1>$version=2.0$cmd=31$copy=[empty]$danji=[empty]$dongho=[empty]$target=elevator#mode=arrival#dongho=[empty]
+2025-07-09 08:00:00,117 [net.ezville.EZWorkerManager.wakeup(139)] [W:7100092580043509011:71] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,117 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000274:0] <start=0168&1>OHgD8K66uzd6+OLhuMlG2BxNKN12IqEDKHf8Bu89mYcak7UkoM0Y6uFyBCXqIlrQLQKEI6/nLuDF
+Z5Plv9/KltwLc5MJ8fFOYlRSVsIeEcbHNHB123RN2NVEDV9wDh9PMFgL/hEKv/oQa3vkfV4vtA==
+
+2025-07-09 08:00:00,117 [net.ezville.ver.EZWorker.working(213)] [W-2:7100092580043509011:71] EXEC class net.ezville.ver.ez20.t_elevator
+2025-07-09 08:00:00,121 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580041901601] Type : 50 , Client : [empty]:56388 , Message =  <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=29#dev=2
+2025-07-09 08:00:00,121 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580041901601:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,121 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000371:0] <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=29#dev=2
+2025-07-09 08:00:00,121 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580041901601:50] EXEC class net.ezville.ver.ez20.t_boiler
+2025-07-09 08:00:00,121 [net.ezville.ver.Exec.send_iot(621)] [SENDIOT:SEND] Message = <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=29#dev=2
+2025-07-09 08:00:00,122 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-307, 현재 대기열 크기: 998
+2025-07-09 08:00:00,122 [net.ezville.ver.EZTransferSsl.onWriteAll(2512)] [SSL WriteAll:2100000000000035219] Client : [empty]:1980 , Msg = <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=29#dev=2
+2025-07-09 08:00:00,122 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-307, 현재 대기열 크기: 998
+2025-07-09 08:00:00,131 [net.ezville.ver.ez20.EZTransfer.onRead_default(860)] [Y:7100092580043509011:71] 아이템은 Q로 이동합니다.
+2025-07-09 08:00:00,132 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-210, 현재 대기열 크기: 999
+2025-07-09 08:00:00,132 [net.ezville.ver.ez20.EZTransfer.onWrite(551)] [S:5500092580010000701:55] Client : [empty]:49675, Msg : <start=0153&0>$version=2.0$cmd=31$copy=[empty]$dongho=[empty]$target=elevator#mode=arrival#dongho=[empty]#direction=#flow=#riding_ev=1#direction=#flow=
+2025-07-09 08:00:00,132 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-210, 현재 대기열 크기: 999
+2025-07-09 08:00:00,132 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:5500092580010000701:55]Client : [empty]:49675 , 데이터 보내기 완료
+2025-07-09 08:00:00,137 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580040801406] Type : 50 , Client : [empty]:33994 , Message =  <start=0317&0>$version=2.0$cmd=11$copy=[empty]$danji=[empty]$dongho=[empty]$target=gateway#dongho=[empty]#ip=[empty]#status=0#curtime=[empty]#hwversion=[empty]#swversion=[empty]&1.0.3&3.4.3&T#specversion=[empty]#spectype=[empty]#mode=1#mode_user=1#mode_method=11#alarm=0&20250709075951#rcare=off
+2025-07-09 08:00:00,137 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580040801406:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,137 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000218:0] <start=0317&0>$version=2.0$cmd=11$copy=[empty]$danji=[empty]$dongho=[empty]$target=gateway#dongho=[empty]#ip=[empty]#status=0#curtime=[empty]#hwversion=[empty]#swversion=[empty]&1.0.3&3.4.3&T#specversion=[empty]#spectype=[empty]#mode=1#mode_user=1#mode_method=11#alarm=0&20250709075951#rcare=off
+2025-07-09 08:00:00,137 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580040801406:50] EXEC class net.ezville.ver.ez20.t_gateway
+2025-07-09 08:00:00,140 [net.ezville.comp.ex.e_gateway.recv_StatusResponse(375)] [GATEWAY COPY VALUE CHECK =>:50-1686][408&1406]
+2025-07-09 08:00:00,140 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-154, 현재 대기열 크기: 999
+2025-07-09 08:00:00,140 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-154, 현재 대기열 크기: 999
+2025-07-09 08:00:00,142 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:7100092580043509011] Type : 71 , Client : [empty]:54459 , Message =  <start=0168&1>$version=2.0$cmd=31$copy=[empty]$danji=[empty]$dongho=[empty]$target=elevator#mode=close#dongho=[empty]
+2025-07-09 08:00:00,142 [net.ezville.EZWorkerManager.wakeup(139)] [W:7100092580043509011:71] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,142 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000374:0] <start=0168&1>OHgD8K66uzd6+OLhuMlG2PTPeOPAGC6YxyBq+v4ZTk0ak7UkoM0Y6uFyBCXqIlrQLQKEI6/nLuDF
+Z5Plv9/KltwLc5MJ8fFOYlRSVsIeEcZiYuVF4wLo07rEbSg2x3RKBWC00ySPaJm44ZnZMS4ckw==
+
+2025-07-09 08:00:00,142 [net.ezville.ver.EZWorker.working(213)] [W-2:7100092580043509011:71] EXEC class net.ezville.ver.ez20.t_elevator
+2025-07-09 08:00:00,153 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580041001801] Type : 50 , Client : [empty]:50664 , Message =  <start=0312&0>$version=2.0$cmd=11$copy=[empty]$danji=[empty]$dongho=[empty]$target=gateway#dongho=[empty]#ip=[empty]#status=0#curtime=[empty]#hwversion=[empty]#swversion=[empty]&1.0.3&3.4.3&T#specversion=[empty]#spectype=[empty]#mode=1#mode_user=1#mode_method=11#alarm=0&20250709080002#rcare=off
+2025-07-09 08:00:00,153 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580041001801:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,153 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000168:0] <start=0312&0>$version=2.0$cmd=11$copy=[empty]$danji=[empty]$dongho=[empty]$target=gateway#dongho=[empty]#ip=[empty]#status=0#curtime=[empty]#hwversion=[empty]#swversion=[empty]&1.0.3&3.4.3&T#specversion=[empty]#spectype=[empty]#mode=1#mode_user=1#mode_method=11#alarm=0&20250709080002#rcare=off
+2025-07-09 08:00:00,153 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580041001801:50] EXEC class net.ezville.ver.ez20.t_gateway
+2025-07-09 08:00:00,155 [net.ezville.ver.ez20.EZTransfer.onRead_default(860)] [Y:5500092580010000700:55] 아이템은 Q로 이동합니다.
+2025-07-09 08:00:00,156 [net.ezville.comp.ex.e_gateway.recv_StatusResponse(375)] [GATEWAY COPY VALUE CHECK =>:50-1707][410&1801]
+2025-07-09 08:00:00,156 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-104, 현재 대기열 크기: 998
+2025-07-09 08:00:00,156 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-104, 현재 대기열 크기: 998
+2025-07-09 08:00:00,157 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-310, 현재 대기열 크기: 999
+2025-07-09 08:00:00,157 [net.ezville.ver.ez20.EZTransfer.onWrite(551)] [S:5500092580010000701:55] Client : [empty]:49675, Msg : <start=0151&0>$version=2.0$cmd=31$copy=[empty]$dongho=[empty]$target=elevator#mode=close#dongho=[empty]#direction=#flow=#riding_ev=1#direction=#flow=
+2025-07-09 08:00:00,157 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-310, 현재 대기열 크기: 999
+2025-07-09 08:00:00,157 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:5500092580010000701:55]Client : [empty]:49675 , 데이터 보내기 완료
+2025-07-09 08:00:00,164 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580042501002] Type : 50 , Client : [empty]:33734 , Message =  <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=1#settemp=9#curtemp=29#dev=2
+2025-07-09 08:00:00,164 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580042501002:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,164 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000221:0] <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=1#settemp=9#curtemp=29#dev=2
+2025-07-09 08:00:00,164 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580042501002:50] EXEC class net.ezville.ver.ez20.t_boiler
+2025-07-09 08:00:00,164 [net.ezville.ver.Exec.send_iot(621)] [SENDIOT:SEND] Message = <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=1#settemp=9#curtemp=29#dev=2
+2025-07-09 08:00:00,165 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-157, 현재 대기열 크기: 999
+2025-07-09 08:00:00,165 [net.ezville.ver.EZTransferSsl.onWriteAll(2512)] [SSL WriteAll:2100000000000035219] Client : [empty]:1980 , Msg = <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=1#settemp=9#curtemp=29#dev=2
+2025-07-09 08:00:00,165 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-157, 현재 대기열 크기: 999
+2025-07-09 08:00:00,166 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5500092580010000700] Type : 55 , Client : [empty]:49676 , Message =  <start=0159&0>$version=2.0$copy=[empty]$cmd=30$dongho=[empty]$target=elevator#mode=location#dongho=[empty]#no=1#direction=up#flow=1#no=2#direction=down#flow=B1
+2025-07-09 08:00:00,166 [net.ezville.EZWorkerManager.wakeup(139)] [W:5500092580010000700:55] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,166 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000356:0] <start=0159&0>$version=2.0$copy=[empty]$cmd=30$dongho=[empty]$target=elevator#mode=location#dongho=[empty]#no=1#direction=up#flow=1#no=2#direction=down#flow=B1
+2025-07-09 08:00:00,166 [net.ezville.ver.EZWorker.working(213)] [W-2:5500092580010000700:55] EXEC class net.ezville.ver.ez20.t_elevator
+2025-07-09 08:00:00,180 [net.ezville.comp.ex.e_elevator.recv_EventRequest(388)] [MODE_LOCATION] 동 -> 418 호 ->403
+2025-07-09 08:00:00,181 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-292, 현재 대기열 크기: 999
+2025-07-09 08:00:00,181 [net.ezville.ver.EZTransferSsl.onWrite(2578)] [S:5000092580041800403:50] Client : [empty]:32916 , <start=0171&0>$version=2.0$cmd=30$copy=[empty]$dongho=[empty]$target=elevator#mode=location#dongho=[empty]#riding_ev=1#no=1#direction=up#flow=1#no=2#direction=down#flow=B1
+2025-07-09 08:00:00,181 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-292, 현재 대기열 크기: 999
+2025-07-09 08:00:00,181 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:5000092580041800403:50]Client : [empty]:32916 , 데이터 보내기 완료
+2025-07-09 08:00:00,191 [net.ezville.common.EZSession.checkGateway(639)] Send Gateway Check - IP : [empty] , ProgramType : 50
+2025-07-09 08:00:00,191 [net.ezville.ver.EZTransferSsl.onWrite(2578)] [S:5000092580040801404:50] Client : [empty]:33372 , <start=0061&0>$version=2.0$cmd=10$copy=[empty]$target=gateway
+2025-07-09 08:00:00,191 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:5000092580040801404:50]Client : [empty]:33372 , 데이터 보내기 완료
+2025-07-09 08:00:00,241 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580041902203] Type : 50 , Client : [empty]:44958 , Message =  <start=0157&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=light#mode=sub#no=9#device_no=4#onoff=1#type=1#type_mode=-1#dimming=-1#dev=2
+2025-07-09 08:00:00,241 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580041902203:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,241 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000539:0] <start=0157&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=light#mode=sub#no=9#device_no=4#onoff=1#type=1#type_mode=-1#dimming=-1#dev=2
+2025-07-09 08:00:00,241 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580041902203:50] EXEC class net.ezville.ver.ez20.t_light
+2025-07-09 08:00:00,241 [net.ezville.ver.Exec.send_iot(621)] [SENDIOT:SEND] Message = <start=0157&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=light#mode=sub#no=9#device_no=4#onoff=1#type=1#type_mode=-1#dimming=-1#dev=2
+2025-07-09 08:00:00,241 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-475, 현재 대기열 크기: 999
+2025-07-09 08:00:00,241 [net.ezville.ver.EZTransferSsl.onWriteAll(2512)] [SSL WriteAll:2100000000000035219] Client : [empty]:1980 , Msg = <start=0157&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=light#mode=sub#no=9#device_no=4#onoff=1#type=1#type_mode=-1#dimming=-1#dev=2
+2025-07-09 08:00:00,241 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-475, 현재 대기열 크기: 999
+2025-07-09 08:00:00,272 [net.ezville.common.EZSession.checkGateway(639)] Send Gateway Check - IP : [empty] , ProgramType : 50
+2025-07-09 08:00:00,272 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580040801405] Type : 50 , Client : [empty]:48960 , Message =  <start=0311&0>$version=2.0$cmd=11$copy=[empty]$danji=[empty]$dongho=[empty]$target=gateway#dongho=[empty]#ip=[empty]#status=0#curtime=[empty]#hwversion=[empty]#swversion=[empty]&1.0.3&3.4.3&T#specversion=[empty]#spectype=[empty]#mode=1#mode_user=1#mode_method=11#alarm=0&20250709080000#rcare=off
+2025-07-09 08:00:00,272 [net.ezville.ver.EZTransferSsl.onWrite(2578)] [S:5000092580040801403:50] Client : [empty]:45290 , <start=0061&0>$version=2.0$cmd=10$copy=[empty]$target=gateway
+2025-07-09 08:00:00,272 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000405:0] <start=0311&0>$version=2.0$cmd=11$copy=[empty]$danji=[empty]$dongho=[empty]$target=gateway#dongho=[empty]#ip=[empty]#status=0#curtime=[empty]#hwversion=[empty]#swversion=[empty]&1.0.3&3.4.3&T#specversion=[empty]#spectype=[empty]#mode=1#mode_user=1#mode_method=11#alarm=0&20250709080000#rcare=off
+2025-07-09 08:00:00,272 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580040801405:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,272 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:5000092580040801403:50]Client : [empty]:45290 , 데이터 보내기 완료
+2025-07-09 08:00:00,272 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580040801405:50] EXEC class net.ezville.ver.ez20.t_gateway
+2025-07-09 08:00:00,272 [net.ezville.comp.ex.e_gateway.recv_StatusResponse(375)] [GATEWAY COPY VALUE CHECK =>:50-1742][408&1405]
+2025-07-09 08:00:00,272 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-341, 현재 대기열 크기: 999
+2025-07-09 08:00:00,272 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-341, 현재 대기열 크기: 999
+2025-07-09 08:00:00,288 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580041800403] Type : 50 , Client : [empty]:32916 , Message =  <start=0117&0>$version=2.0$cmd=31$copy=[empty]$danji=[empty]$dongho=[empty]$target=elevator#mode=location#dongho=[empty]
+2025-07-09 08:00:00,288 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580041800403:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,288 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000424:0] <start=0117&0>$version=2.0$cmd=31$copy=[empty]$danji=[empty]$dongho=[empty]$target=elevator#mode=location#dongho=[empty]
+2025-07-09 08:00:00,288 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580041800403:50] EXEC class net.ezville.ver.ez20.t_elevator
+2025-07-09 08:00:00,288 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-360, 현재 대기열 크기: 999
+2025-07-09 08:00:00,288 [net.ezville.ver.ez20.EZTransfer.onWrite(551)] [S:5500092580010000700:55] Client : [empty]:49676, Msg : <start=0139&0>$version=2.0$cmd=31$copy=[empty]$dongho=[empty]$target=elevator#mode=location#dongho=[empty]#direction=#destination=0&0#flow=
+2025-07-09 08:00:00,288 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-360, 현재 대기열 크기: 999
+2025-07-09 08:00:00,288 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:5500092580010000700:55]Client : [empty]:49676 , 데이터 보내기 완료
+2025-07-09 08:00:00,319 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580042400804] Type : 50 , Client : [empty]:60506 , Message =  <start=0793&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=standby#mode=sub#no=1#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#device_no=3#power_values=0#power_unit=w#onoff=1#state=1#no=2#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=0#state=1#no=3#device_no=1#power_values=0#power_unit=w#onoff=0#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#no=4#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#no=9#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#device_no=3#power_values=0#power_unit=w#onoff=1#state=1
+2025-07-09 08:00:00,319 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580042400804:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,319 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000291:0] <start=0793&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=standby#mode=sub#no=1#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#device_no=3#power_values=0#power_unit=w#onoff=1#state=1#no=2#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=0#state=1#no=3#device_no=1#power_values=0#power_unit=w#onoff=0#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#no=4#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#no=9#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#device_no=3#power_values=0#power_unit=w#onoff=1#state=1
+2025-07-09 08:00:00,319 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580042400804:50] EXEC class net.ezville.ver.ez20.t_standby
+2025-07-09 08:00:00,319 [net.ezville.ver.Exec.send_iot(625)] [SENDIOT:NOTSEND] Message = <start=0793&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=standby#mode=sub#no=1#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#device_no=3#power_values=0#power_unit=w#onoff=1#state=1#no=2#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=0#state=1#no=3#device_no=1#power_values=0#power_unit=w#onoff=0#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#no=4#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#no=9#device_no=1#power_values=0#power_unit=w#onoff=1#state=1#device_no=2#power_values=0#power_unit=w#onoff=1#state=1#device_no=3#power_values=0#power_unit=w#onoff=1#state=1
+2025-07-09 08:00:00,319 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-227, 현재 대기열 크기: 999
+2025-07-09 08:00:00,319 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-227, 현재 대기열 크기: 999
+2025-07-09 08:00:00,335 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580042401904] Type : 50 , Client : [empty]:44518 , Message =  <start=0117&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=subphone#no=2#status=1#no=3#status=1
+2025-07-09 08:00:00,335 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580042401904:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,335 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000377:0] <start=0117&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=subphone#no=2#status=1#no=3#status=1
+2025-07-09 08:00:00,335 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580042401904:50] EXEC class net.ezville.ver.ez20.t_subphone
+2025-07-09 08:00:00,335 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-313, 현재 대기열 크기: 999
+2025-07-09 08:00:00,335 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-313, 현재 대기열 크기: 999
+2025-07-09 08:00:00,352 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580041800403] Type : 50 , Client : [empty]:32916 , Message =  <start=0139&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=secsensor#mode=1#no=2#onoff=1#alarm=0#zone=1#dongho=[empty]
+2025-07-09 08:00:00,352 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580041800403:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,352 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000431:0] <start=0139&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=secsensor#mode=1#no=2#onoff=1#alarm=0#zone=1#dongho=[empty]
+2025-07-09 08:00:00,352 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580041800403:50] EXEC class net.ezville.ver.ez20.t_secsensor
+2025-07-09 08:00:00,352 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-367, 현재 대기열 크기: 999
+2025-07-09 08:00:00,352 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-367, 현재 대기열 크기: 999
+2025-07-09 08:00:00,367 [net.ezville.common.EZSession.checkGateway(639)] Send Gateway Check - IP : [empty] , ProgramType : 50
+2025-07-09 08:00:00,367 [net.ezville.ver.EZTransferSsl.onWrite(2578)] [S:5000092580041000706:50] Client : [empty]:49200 , <start=0061&0>$version=2.0$cmd=10$copy=[empty]$target=gateway
+2025-07-09 08:00:00,367 [net.ezville.ver.EZTransfer.threadWrite(456)] [Q:5000092580041000706:50]Client : [empty]:49200 , 데이터 보내기 완료
+2025-07-09 08:00:00,383 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580041801703] Type : 50 , Client : [empty]:60340 , Message =  <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=30#dev=2
+2025-07-09 08:00:00,383 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580041801703:50] 작업을 실행합니다. Worker ID: [empty]
+2025-07-09 08:00:00,383 [net.ezville.ver.EZWorker.working(212)] [W-1:900000000000000384:0] <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=30#dev=2
+2025-07-09 08:00:00,383 [net.ezville.ver.EZWorker.working(213)] [W-2:5000092580041801703:50] EXEC class net.ezville.ver.ez20.t_boiler
+2025-07-09 08:00:00,383 [net.ezville.ver.Exec.send_iot(621)] [SENDIOT:SEND] Message = <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=30#dev=2
+2025-07-09 08:00:00,383 [net.ezville.EZWorkerManager.addWorker(170)] [Worker Manager] 워커 복귀 성공: net.ezville.ver.EZWorker-320, 현재 대기열 크기: 999
+2025-07-09 08:00:00,383 [net.ezville.ver.EZTransferSsl.onWriteAll(2512)] [SSL WriteAll:2100000000000035219] Client : [empty]:1980 , Msg = <start=0134&0>$version=2.0$cmd=30$copy=[empty]$danji=[empty]$dongho=[empty]$target=boiler#mode=1#no=4#onoff=0#settemp=5#curtemp=30#dev=2
+2025-07-09 08:00:00,383 [net.ezville.ver.EZWorker.run(146)] [EZWorker] 워커 복귀: net.ezville.ver.EZWorker-320, 현재 대기열 크기: 999
+2025-07-09 08:00:00,398 [net.ezville.ver.EZTransfer.addWorkerInQ(307)] [R:5000092580040901906] Type : 50 , Client : [empty]:50776 , Message =  <start=0100&0>$version=2.0$cmd=10$copy=[empty]$danji=[empty]$dongho=[empty]$target=locationinformation
+2025-07-09 08:00:00,398 [net.ezville.EZWorkerManager.wakeup(139)] [W:5000092580040901906:50] 작업을 실행합니다. Worker ID: [empty]

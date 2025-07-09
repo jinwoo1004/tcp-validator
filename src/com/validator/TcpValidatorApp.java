@@ -27,6 +27,7 @@ public class TcpValidatorApp extends JFrame {
     private JLabel statusLabel, summaryLabel;
     private JProgressBar progressBar;
     private List<Scenario> scenarios = new ArrayList<>();
+    private JButton maskIpButton;
 
     private JComboBox<String> resultFilter;
     private JComboBox<String> nameFilter;
@@ -56,7 +57,10 @@ public class TcpValidatorApp extends JFrame {
 
         loadScenarioButton = new JButton("시나리오 불러오기");
         loadScenarioButton.addActionListener(e -> loadScenarioFromFile());
-
+        
+        maskIpButton = new JButton("로그 IP 마스킹");
+        maskIpButton.addActionListener(e -> maskIpFromLogFile());
+        
         resultFilter = new JComboBox<>(new String[]{"전체", "PASS", "FAIL", "ERROR"});
         resultFilter.addActionListener(e -> applyFilters());
 
@@ -72,6 +76,7 @@ public class TcpValidatorApp extends JFrame {
         topPanel.add(resultFilter);
         topPanel.add(new JLabel("시나리오 "));
         topPanel.add(nameFilter);
+        topPanel.add(maskIpButton);
         add(topPanel, BorderLayout.NORTH);
 
         statusLabel = new JLabel("준비됨");
@@ -134,7 +139,74 @@ public class TcpValidatorApp extends JFrame {
 
         loadScenarios("scenarios/extracted_scenarios.csv");
     }
+    
+    // 로그 파일에서 IP 주소를 마스킹해서 새 파일로 저장
+    private void maskIpFromLogFile() {
+        JFileChooser chooser = new JFileChooser(".");
+        chooser.setDialogTitle("로그 파일 선택 (민감 정보 마스킹)");
+        int ret = chooser.showOpenDialog(this);
+        if (ret != JFileChooser.APPROVE_OPTION) return;
 
+        File inputFile = chooser.getSelectedFile();
+        String outputFilePath = inputFile.getAbsolutePath().replaceAll("\\.txt$", "") + "_masked.txt";
+
+        // 민감 정보 정규식 정의
+        Pattern ipPattern = Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b");
+        Pattern danjiPattern = Pattern.compile("(?i)(danji=)\\d+");
+        Pattern donghoPattern = Pattern.compile("(?i)(dongho=)[0-9&]+");
+        Pattern hwPattern = Pattern.compile("(?i)(hwversion=)[^#&\\s]+");
+        Pattern swPattern = Pattern.compile("(?i)(swversion=)[^#&\\s]+");
+        Pattern specPattern = Pattern.compile("(?i)(specversion=)[^#&\\s]+");
+        Pattern spectypePattern = Pattern.compile("(?i)(spectype=)[^#&\\s]+");
+        Pattern workerIdPattern = Pattern.compile("(?i)(Worker ID: )\\d+(:\\d+)?");
+        Pattern copyPattern = Pattern.compile("(?i)(copy=)[0-9\\-]+");
+        Pattern macPattern = Pattern.compile("(?i)(mac=)[^#&\\s]+");
+        Pattern phonePattern = Pattern.compile("(?i)(phone=)[^#&\\s]+");
+        Pattern uuidPattern = Pattern.compile("(?i)(uuid=)[^#&\\s]+");
+        Pattern userIdPattern = Pattern.compile("(?i)(userId=)[^#&\\s]+");
+        Pattern carnoPattern = Pattern.compile("(?i)(carno=)[^#&\\s]+");
+        Pattern visitImgPattern = Pattern.compile("(?i)(방문자 사진 : 파일 경로 - )[^#&\\s]+");
+        Pattern portIpPattern = Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}:\\d+\\b");
+        Pattern curtimePattern = Pattern.compile("(?i)(curtime=)\\d+");
+        Pattern sessionPattern = Pattern.compile("(?i)(session=)[^#&\\s]+");
+        Pattern tokenPattern = Pattern.compile("(?i)(token=)[^#&\\s]+");
+
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile), "EUC-KR"));
+             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFilePath), "EUC-KR"))) {
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // 마스킹 적용
+                line = ipPattern.matcher(line).replaceAll("[empty]");
+                line = danjiPattern.matcher(line).replaceAll("$1[empty]");
+                line = donghoPattern.matcher(line).replaceAll("$1[empty]");
+                line = hwPattern.matcher(line).replaceAll("$1[empty]");
+                line = swPattern.matcher(line).replaceAll("$1[empty]");
+                line = specPattern.matcher(line).replaceAll("$1[empty]");
+                line = spectypePattern.matcher(line).replaceAll("$1[empty]");
+                line = workerIdPattern.matcher(line).replaceAll("$1[empty]");
+                line = copyPattern.matcher(line).replaceAll("$1[empty]");
+                line = macPattern.matcher(line).replaceAll("$1[empty]");
+                line = phonePattern.matcher(line).replaceAll("$1[empty]");
+                line = uuidPattern.matcher(line).replaceAll("$1[empty]");
+                line = userIdPattern.matcher(line).replaceAll("$1[empty]");
+                line = carnoPattern.matcher(line).replaceAll("$1[empty]");
+                line = visitImgPattern.matcher(line).replaceAll("$1[empty]");
+                line = portIpPattern.matcher(line).replaceAll("[empty]");
+                line = curtimePattern.matcher(line).replaceAll("$1[empty]");
+                line = sessionPattern.matcher(line).replaceAll("$1[empty]");
+                line = tokenPattern.matcher(line).replaceAll("$1[empty]");
+
+                writer.write(line);
+                writer.newLine();
+            }
+
+            JOptionPane.showMessageDialog(this, "✅ 마스킹 완료!\n결과 파일: " + outputFilePath);
+
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this, "❌ 마스킹 실패: " + ex.getMessage());
+        }
+    }    
     private void applyFilters() {
         if (resultFilter == null || nameFilter == null) return;
 
