@@ -140,73 +140,71 @@ public class TcpValidatorApp extends JFrame {
         loadScenarios("scenarios/extracted_scenarios.csv");
     }
     
-    // 로그 파일에서 IP 주소를 마스킹해서 새 파일로 저장
-    private void maskIpFromLogFile() {
+    // 로그 파일에서 민감정보(IP 등) 마스킹 후 저장 (Java 1.8 호환)
+    private void maskSensitiveInfo() {
         JFileChooser chooser = new JFileChooser(".");
-        chooser.setDialogTitle("로그 파일 선택 (민감 정보 마스킹)");
-        int ret = chooser.showOpenDialog(this);
-        if (ret != JFileChooser.APPROVE_OPTION) return;
+        chooser.setDialogTitle("로그 파일 선택");
+        if (chooser.showOpenDialog(this) != JFileChooser.APPROVE_OPTION) return;
 
         File inputFile = chooser.getSelectedFile();
         String outputFilePath = inputFile.getAbsolutePath().replaceAll("\\.txt$", "") + "_masked.txt";
 
-        // 민감 정보 정규식 정의
-        Pattern ipPattern = Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b");
-        Pattern danjiPattern = Pattern.compile("(?i)(danji=)\\d+");
-        Pattern donghoPattern = Pattern.compile("(?i)(dongho=)[0-9&]+");
-        Pattern hwPattern = Pattern.compile("(?i)(hwversion=)[^#&\\s]+");
-        Pattern swPattern = Pattern.compile("(?i)(swversion=)[^#&\\s]+");
-        Pattern specPattern = Pattern.compile("(?i)(specversion=)[^#&\\s]+");
-        Pattern spectypePattern = Pattern.compile("(?i)(spectype=)[^#&\\s]+");
+        // 패턴 리스트 (Java 8 호환용)
+        List<Pattern> simpleReplacements = Arrays.asList(
+            Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b"),                    // IP
+            Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}:\\d+\\b")                 // IP:Port
+        );
+
+        List<Pattern> keyValuePatterns = Arrays.asList(
+            Pattern.compile("(?i)(danji=)[^#&\\s]+"),
+            Pattern.compile("(?i)(dongho=)[^#&\\s]+"),
+            Pattern.compile("(?i)(copy=)[^#&\\s]+"),
+            Pattern.compile("(?i)(hwversion=)[^#&\\s]+"),
+            Pattern.compile("(?i)(swversion=)[^#&\\s]+"),
+            Pattern.compile("(?i)(specversion=)[^#&\\s]+"),
+            Pattern.compile("(?i)(spectype=)[^#&\\s]+"),
+            Pattern.compile("(?i)(mac=)[^#&\\s]+"),
+            Pattern.compile("(?i)(phone=)[^#&\\s]+"),
+            Pattern.compile("(?i)(uuid=)[^#&\\s]+"),
+            Pattern.compile("(?i)(userId=)[^#&\\s]+"),
+            Pattern.compile("(?i)(carno=)[^#&\\s]+"),
+            Pattern.compile("(?i)(curtime=)[^#&\\s]+"),
+            Pattern.compile("(?i)(session=)[^#&\\s]+"),
+            Pattern.compile("(?i)(token=)[^#&\\s]+")
+        );
+
         Pattern workerIdPattern = Pattern.compile("(?i)(Worker ID: )\\d+(:\\d+)?");
-        Pattern copyPattern = Pattern.compile("(?i)(copy=)[0-9\\-]+");
-        Pattern macPattern = Pattern.compile("(?i)(mac=)[^#&\\s]+");
-        Pattern phonePattern = Pattern.compile("(?i)(phone=)[^#&\\s]+");
-        Pattern uuidPattern = Pattern.compile("(?i)(uuid=)[^#&\\s]+");
-        Pattern userIdPattern = Pattern.compile("(?i)(userId=)[^#&\\s]+");
-        Pattern carnoPattern = Pattern.compile("(?i)(carno=)[^#&\\s]+");
         Pattern visitImgPattern = Pattern.compile("(?i)(방문자 사진 : 파일 경로 - )[^#&\\s]+");
-        Pattern portIpPattern = Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}:\\d+\\b");
-        Pattern curtimePattern = Pattern.compile("(?i)(curtime=)\\d+");
-        Pattern sessionPattern = Pattern.compile("(?i)(session=)[^#&\\s]+");
-        Pattern tokenPattern = Pattern.compile("(?i)(token=)[^#&\\s]+");
 
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile), "EUC-KR"));
              BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFilePath), "EUC-KR"))) {
 
             String line;
             while ((line = reader.readLine()) != null) {
-                // 마스킹 적용
-                line = ipPattern.matcher(line).replaceAll("[empty]");
-                line = danjiPattern.matcher(line).replaceAll("$1[empty]");
-                line = donghoPattern.matcher(line).replaceAll("$1[empty]");
-                line = hwPattern.matcher(line).replaceAll("$1[empty]");
-                line = swPattern.matcher(line).replaceAll("$1[empty]");
-                line = specPattern.matcher(line).replaceAll("$1[empty]");
-                line = spectypePattern.matcher(line).replaceAll("$1[empty]");
+                // 단순 대체: 전체를 [empty]로 치환
+                for (Pattern p : simpleReplacements) {
+                    line = p.matcher(line).replaceAll("[empty]");
+                }
+
+                // key=value 형태는 값만 마스킹
+                for (Pattern p : keyValuePatterns) {
+                    line = p.matcher(line).replaceAll("$1[empty]");
+                }
+
+                // 특수 형태
                 line = workerIdPattern.matcher(line).replaceAll("$1[empty]");
-                line = copyPattern.matcher(line).replaceAll("$1[empty]");
-                line = macPattern.matcher(line).replaceAll("$1[empty]");
-                line = phonePattern.matcher(line).replaceAll("$1[empty]");
-                line = uuidPattern.matcher(line).replaceAll("$1[empty]");
-                line = userIdPattern.matcher(line).replaceAll("$1[empty]");
-                line = carnoPattern.matcher(line).replaceAll("$1[empty]");
                 line = visitImgPattern.matcher(line).replaceAll("$1[empty]");
-                line = portIpPattern.matcher(line).replaceAll("[empty]");
-                line = curtimePattern.matcher(line).replaceAll("$1[empty]");
-                line = sessionPattern.matcher(line).replaceAll("$1[empty]");
-                line = tokenPattern.matcher(line).replaceAll("$1[empty]");
 
                 writer.write(line);
                 writer.newLine();
             }
 
             JOptionPane.showMessageDialog(this, "✅ 마스킹 완료!\n결과 파일: " + outputFilePath);
-
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(this, "❌ 마스킹 실패: " + ex.getMessage());
         }
-    }    
+    }
+    
     private void applyFilters() {
         if (resultFilter == null || nameFilter == null) return;
 
