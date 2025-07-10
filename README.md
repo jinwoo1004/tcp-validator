@@ -1,3 +1,5 @@
+<img src="scenarios/tcp-validator-test-view.png" alt="TCP 로그 패킷 검수 화면" width="600"/>
+    
 # LogMonitor
 
 `LogMonitor`는 시나리오 기반 로그 분석을 수행하는 Java 프로그램입니다.  
@@ -51,5 +53,3 @@ private String extractSendPart(String line) {
     }
     return sendPart;
 }
-
-![TCP 로그 내 패킷 검수 완료 화면](https://raw.githubusercontent.com/jinwoo1004/tcp-validator/master/scenarios/TCP%20%EB%A1%9C%EA%B7%B8%20%EB%82%B4%20%ED%8C%A8%ED%82%B7%20%EA%B2%80%EC%88%98%20%EC%99%84%EB%A3%8C%20%ED%99%94%EB%A9%B4.png)
