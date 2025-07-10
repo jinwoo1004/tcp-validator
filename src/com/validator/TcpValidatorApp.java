@@ -299,9 +299,9 @@ public class TcpValidatorApp extends JFrame {
                     params += ";#mode=" + mode;
                 }
 
-                String name = target + "(cmd=" + cmd + ")";
+                String name = target + " => cmd=" + cmd;
                 String dedupKey = "cmd=" + cmd + "|target=" + target;
-                if (!mode.isEmpty()) dedupKey += "|mode=" + mode;
+                if (!mode.isEmpty()) name += " mode=" + mode; dedupKey += "|mode=" + mode;
 
                 if (seenKeys.contains(dedupKey)) continue;
                 seenKeys.add(dedupKey);
