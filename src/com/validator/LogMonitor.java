@@ -46,14 +46,14 @@ public class LogMonitor implements Runnable {
 
         for (Scenario sc : scenarios) {
             boolean matched = false;
-
+            String send = "";
             boolean scenarioHasMode = sc.params.stream().anyMatch(p -> p.startsWith("#mode="));
 
             for (int i = 0; i < allLines.size(); i++) {
                 String line = allLines.get(i);
                 int lineNo = i + 1;
                 // #err= 포함된 로그는 무시
-                if (line.contains("#err=")) {
+                if (line.contains("#err=") || line.contains("2270&NoData")) {
                     continue;
                 }
                 if (!line.contains("[R:") && !line.contains("[S:")) {
@@ -76,7 +76,7 @@ public class LogMonitor implements Runnable {
                 }
                 if (!paramsOk) continue;
 
-                String send = extractSendPart(line);
+                send = extractSendPart(line);
                 if (send == null) continue;
 
                 String key = sc.name + " (Line " + lineNo + ")";
@@ -95,6 +95,7 @@ public class LogMonitor implements Runnable {
 
             if (!matched) {
                 results.put(sc.name, "FAIL: 시나리오 조건 일치 로그 없음");
+                remarks.put(sc.name, "⛔ 로그 " + send);
             }
         }
     }

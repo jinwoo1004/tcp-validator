@@ -6,6 +6,7 @@ import javax.swing.table.*;
 import javax.swing.event.ListSelectionListener;
 
 import java.awt.*;
+import java.awt.Color;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -99,8 +100,37 @@ public class TcpValidatorApp extends JFrame {
                 return false;
             }
         };
+        DefaultTableCellRenderer resultRenderer = new DefaultTableCellRenderer() {
+            @Override
+            public Component getTableCellRendererComponent(JTable table, Object value,
+                                                           boolean isSelected, boolean hasFocus,
+                                                           int row, int column) {
+                JLabel c = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                if (value != null) {
+                    String val = value.toString().toUpperCase();
+                    //c.setFont(c.getFont().deriveFont(Font.BOLD));
+
+                    if (val.contains("PASS")) {
+                        c.setText("✓ " + value.toString());
+                        c.setForeground(new Color(0, 128, 0)); // 초록
+                    } else if (val.contains("FAIL")) {
+                        c.setText("✗ " + value.toString());
+                        c.setForeground(Color.RED); // 빨강
+                    } else if (val.contains("ERROR")) {
+                        c.setText("⚠ " + value.toString());
+                        c.setForeground(Color.BLACK); // 검정
+                    } else {
+                        c.setForeground(Color.BLACK);
+                    }
+                } else {
+                    c.setForeground(Color.BLACK);
+                }
+                return c;
+            }
+        };
         resultTable = new JTable(tableModel);
         resultTable.setAutoCreateRowSorter(true);
+        resultTable.getColumnModel().getColumn(1).setCellRenderer(resultRenderer); // 결과 컬럼에 적용
 
         TableColumnModel colModel = resultTable.getColumnModel();
         colModel.getColumn(3).setMinWidth(0);
